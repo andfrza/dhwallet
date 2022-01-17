@@ -1,22 +1,18 @@
 package com.digitalhouse.dhwallet
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.digitalhouse.dhwallet.adapter.TransactionAdapter
+import com.digitalhouse.dhwallet.element.TransactionsRealizadas
 
 
 private const val ARG_ENTRADA = "arg_entrada"
 private const val ARG_SAIDA = "arg_saida"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [TransactionFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TransactionFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var entrada: String? = null
@@ -32,11 +28,10 @@ class TransactionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        val entradaView = view.findViewById<TextView>(R.id.entrada)
-//        entrada?.let{
-//            entradaView.text = it
-//        }
+        val recycler = view.findViewById<RecyclerView>(R.id.recyclerTransaction)
+        val transactionsRealizadas = TransactionsRealizadas()
+        val lista = transactionsRealizadas.listagemDeTransacoesRealizadas()
+        recycler.adapter = TransactionAdapter(lista)
     }
 
     override fun onCreateView(
@@ -44,7 +39,7 @@ class TransactionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_transaction, container, false)
+        return inflater.inflate(R.layout.transaction_fragment, container, false)
     }
 
     companion object {
