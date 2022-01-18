@@ -8,7 +8,7 @@ import com.digitalhouse.dhwallet.adapter.ContactAdapter
 import com.digitalhouse.dhwallet.model.Contact
 import com.digitalhouse.dhwallet.model.ContactType
 
-class TransferFragment : Fragment(R.layout.transference_fragment) {
+class TransferenceFragment : Fragment(R.layout.transference_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

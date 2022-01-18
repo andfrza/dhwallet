@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background_home_card"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TransferFragment">
+    tools:context=".TransferenceFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
