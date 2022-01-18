@@ -44,6 +44,7 @@ class TransactionFragment : Fragment(R.layout.transaction_fragment), Transaction
         view.setOnClickListener {
             parentFragmentManager
                 .beginTransaction()
+                .addToBackStack(TransactionFragment::class.java.name)
                 .replace(R.id.fragment_container,TransferFragment())
                 .commit()
         }
