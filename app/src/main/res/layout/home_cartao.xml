@@ -8,6 +8,7 @@
     tools:context=".TransferenceFragment">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_cartao"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="10dp">
@@ -17,16 +18,19 @@
             android:layout_width="37dp"
             android:layout_height="8dp"
             android:layout_marginStart="31dp"
-            android:layout_marginTop="21dp"/>
+            android:layout_marginTop="21dp"
+            android:textSize="7sp"
+            android:text="Limite"/>
         <TextView
             android:id="@+id/limite_valor"
             android:layout_width="124dp"
             android:layout_height="28dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:textSize="24sp"/>
         <ImageView
             android:id="@+id/bandeira"
-            android:layout_width="16dp"
+            android:layout_width="64dp"
             android:layout_height="16dp"
             android:layout_marginStart="240dp"
             android:layout_marginTop="31dp"
@@ -64,25 +68,31 @@
             android:layout_width="25dp"
             android:layout_height="8dp"
             android:layout_marginStart="31dp"
-            android:layout_marginTop="141dp"/>
+            android:layout_marginTop="141dp"
+            android:textSize="7sp"
+            android:text="Nome"/>
         <TextView
             android:id="@+id/nome_nome"
             android:layout_width="129dp"
             android:layout_height="18dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="156dp"/>
+            android:layout_marginTop="156dp"
+            android:textSize="15sp"/>
         <TextView
             android:id="@+id/validade_texto"
-            android:layout_width="25dp"
+            android:layout_width="28dp"
             android:layout_height="8dp"
             android:layout_marginStart="235dp"
-            android:layout_marginTop="141dp"/>
+            android:layout_marginTop="141dp"
+            android:textSize="7sp"
+            android:text="Validade"/>
         <TextView
             android:id="@+id/validade_valor"
             android:layout_width="40dp"
             android:layout_height="18dp"
             android:layout_marginStart="234dp"
-            android:layout_marginTop="156dp"/>
+            android:layout_marginTop="156dp"
+            android:textSize="15sp"/>
 
 
     </androidx.cardview.widget.CardView>

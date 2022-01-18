@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.dhwallet.adapter.TransactionAdapter
-import com.digitalhouse.dhwallet.element.TransactionsRealizadas
+import com.digitalhouse.dhwallet.appLists.TransactionsRealizadas
 
 
 private const val ARG_ENTRADA = "arg_entrada"
