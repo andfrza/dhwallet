@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TransferFragment">
+    tools:context=".TransactionFragment">
 
     <View
         android:id="@+id/background_header"
@@ -23,6 +23,7 @@
         app:titleTextColor="@color/white"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
+            android:id="@+id/profile"
             android:layout_gravity="end"
             android:scaleType="centerCrop"
             android:src="@drawable/foto"
@@ -64,24 +65,17 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="16dp"/>
 
-    <TextView
-        android:id="@+id/title_contact"
-        style="@style/Subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/guide_header"
-        app:layout_constraintStart_toStartOf="@id/guide_start"
-        android:layout_marginTop="31dp"
-        android:text="@string/title_contact"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/title_contact"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background_header"
         tools:itemCount="20"
-        tools:listitem="@layout/item_contact"/>
+        tools:listitem="@layout/transaction_transacao_completa"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
