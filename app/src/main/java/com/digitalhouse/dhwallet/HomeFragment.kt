@@ -11,6 +11,8 @@ import com.digitalhouse.dhwallet.adapter.HomeViewPagerAdapter
 import com.digitalhouse.dhwallet.adapter.TransactionAdapter
 import com.digitalhouse.dhwallet.appLists.Cartoes
 import com.digitalhouse.dhwallet.appLists.TransactionsHome
+import com.digitalhouse.dhwallet.util.CustomPageTransformer
+import com.digitalhouse.dhwallet.util.decorator.HorizontalMarginItemDecoration
 
 class HomeFragment : Fragment() {
 
@@ -24,12 +26,17 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //Definição das variáveis:
         val viewPagerCartao = view.findViewById<ViewPager2>(R.id.viewPager_cartao)
         val recyclerViewHome = view.findViewById<RecyclerView>(R.id.recycler_home)
         val listaDeCartoes = Cartoes().listaDeCartoes()
 
         //ViewPager2:
         viewPagerCartao.adapter = HomeViewPagerAdapter(this, listaDeCartoes)
+        viewPagerCartao.addItemDecoration(HorizontalMarginItemDecoration(view.context,R.dimen.viewpager_current_item_horizontal_margin))
+        viewPagerCartao.setPageTransformer(CustomPageTransformer(view.context))
+        viewPagerCartao.offscreenPageLimit = 1
 
         //RecyclerView:
         val transactionsHome = TransactionsHome()

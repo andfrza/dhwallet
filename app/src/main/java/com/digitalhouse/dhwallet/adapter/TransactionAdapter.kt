@@ -1,5 +1,6 @@
 package com.digitalhouse.dhwallet.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -65,5 +66,9 @@ class TransactionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         title.text = item.transactionTitle
         subtitle.text = item.transactionSubtitle
         value.text = item.transactionValue
+        if(subtitle.text=="Pagamento"){
+            value.setTextColor(Color.parseColor("#FFFB6969"))
+        }else{value.setTextColor(Color.parseColor("#FF45C232"))}
+
     }
 }
