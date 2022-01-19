@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.digitalhouse.dhwallet.R
@@ -50,6 +51,8 @@ class TransactionAdapter(private val listaDeTransacoes:List<GroupTransaction>): 
 //Moldes para o recycler:
 class TransactionHeaderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val title: TextView = view.findViewById(R.id.transaction_header_title)
+    private val imageArrow: ImageView = view.findViewById(R.id.transaction_arrow)
+
     fun cabecalhoTransaction(transactionHeaderTitle:String){
         title.text = transactionHeaderTitle
     }

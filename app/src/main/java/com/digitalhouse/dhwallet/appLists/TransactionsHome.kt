@@ -7,6 +7,10 @@ class TransactionsHome{
     fun listagemDeTransacoesHome():MutableList<GroupTransaction>{
         return mutableListOf(
             GroupTransaction(
+                transactionType = GroupTransactionType.CABECALHO,
+                transactionTitle = "Transações"
+            ),
+            GroupTransaction(
                 transactionType = GroupTransactionType.TRANSACAO ,
                 transactionTitle = "Dribble Inc.",
                 transactionSubtitle = "Recebimento",
@@ -25,7 +29,7 @@ class TransactionsHome{
                 transactionTitle = "Netflix",
                 transactionSubtitle = "Pagamento",
                 transactionValue = "- R$ 15",
-                transactionImage ="https://assets.brand.microsites.netflix.io/assets/2800a67c-4252-11ec-a9ce-066b49664af6_cm_800w.jpg?v=4"
+                transactionImage ="https://gkpb.com.br/wp-content/uploads/2016/06/novo-icone-identidade-visual-logo-netflix-blog-gkpb.jpg"
             ),
             GroupTransaction(
                 transactionType = GroupTransactionType.TRANSACAO ,
