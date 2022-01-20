@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,13 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/guide_header"/>
+        app:layout_constraintBottom_toBottomOf="@id/guide_header_230"/>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="@string/title_transfer"
         app:navigationIcon="@drawable/ic_arrow_backward"
         app:titleTextColor="@color/white"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,49 +33,169 @@
             tools:ignore = "ContentDescription"/>
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchview"
-        style="@style/Widget.DHWallet.SearchView"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/cardinfo_limite_texto"
+        style="@style/Subtitle.Inverted"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:defaultQueryHint="@string/search_hint"
-        app:layout_constraintStart_toStartOf="@id/guide_start"
-        app:layout_constraintEnd_toEndOf="@id/guide_end"
-        app:layout_constraintBottom_toBottomOf="@id/guide_header"
+        android:textSize="13sp"
+        android:layout_margin="7dp"
+        android:text="Limite"
+        app:layout_constraintStart_toStartOf="@id/guide_start_30"
         app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+    <TextView
+        android:id="@+id/cardinfo_limite_valor"
+        style="@style/Title.Inverted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="33sp"
+        android:layout_margin="7dp"
+        app:layout_constraintStart_toStartOf="@id/guide_start_30"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_limite_texto"
+        tools:text="R$ 18,24"/>
+    <TextView
+        android:id="@+id/cardinfo_numero_1"
+        style="@style/Subtitle.Inverted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintStart_toStartOf="@id/guide_start_30"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_limite_valor"
+        android:text="****"/>
+    <TextView
+        android:id="@+id/cardinfo_numero_2"
+        style="@style/Subtitle.Inverted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toEndOf="@id/cardinfo_numero_1"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_limite_valor"
+        android:text="****"/>
+    <TextView
+        android:id="@+id/cardinfo_numero_3"
+        style="@style/Subtitle.Inverted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toEndOf="@id/cardinfo_numero_2"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_limite_valor"
+        android:text="****"/>
+    <TextView
+        android:id="@+id/cardinfo_numero_4"
+        style="@style/Subtitle.Inverted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toEndOf="@id/cardinfo_numero_3"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_limite_valor"
+        tools:text="1234"/>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_header"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="223dp"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_start"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_end"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp"/>
-
+    <TextView
+        android:id="@+id/cardinfo_servicos"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintStart_toEndOf="@id/guide_start_20"
+        app:layout_constraintTop_toBottomOf="@id/guide_header_230"
+        android:text="Serviços"/>
+    <ImageButton
+        android:id="@+id/cardinfo_botao_transferir"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_servicos"
+        app:layout_constraintStart_toStartOf="@id/guide_start_20"
+        android:background="@drawable/background_button_transferir"
+        android:src="@drawable/ic_arrow_up"/>
+    <TextView
+        android:id="@+id/cardinfo_transferir_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="@id/cardinfo_botao_transferir"
+        app:layout_constraintEnd_toEndOf="@id/cardinfo_botao_transferir"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_botao_transferir"
+        android:text="Transferir"/>
+    <ImageButton
+        android:id="@+id/cardinfo_botao_transacoes"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_servicos"
+        app:layout_constraintStart_toEndOf="@id/cardinfo_botao_transferir"
+        android:background="@drawable/background_button_transacoes"
+        android:src="@drawable/ic_bolt"/>
+    <TextView
+        android:id="@+id/cardinfo_transacoes_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="@id/cardinfo_botao_transacoes"
+        app:layout_constraintEnd_toEndOf="@id/cardinfo_botao_transacoes"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_botao_transacoes"
+        android:text="Transações"/>
+    <ImageButton
+        android:id="@+id/cardinfo_botao_pagamento"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_servicos"
+        app:layout_constraintStart_toEndOf="@id/cardinfo_botao_transacoes"
+        android:background="@drawable/background_button_pagamentos"
+        android:src="@drawable/ic_cifrao"/>
+    <TextView
+        android:id="@+id/cardinfo_pagamento_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="@id/cardinfo_botao_pagamento"
+        app:layout_constraintEnd_toEndOf="@id/cardinfo_botao_pagamento"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_botao_pagamento"
+        android:text="Pagamento"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler"
+        android:id="@+id/cardinfo_recycler"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/cardinfo_pagamento_texto"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/background_header"
-        tools:itemCount="20"
-        tools:listitem="@layout/transference_item_contact"
+        tools:listitem="@layout/cardinfo_recycler_elementos_unitarios"
         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_header_230"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="230dp"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start_30"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start_20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
