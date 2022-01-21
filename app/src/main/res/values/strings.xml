@@ -19,4 +19,5 @@
     <string name="title_transfer">Transferência</string>
     <string name="search_hint">Busque por uma pessoa</string>
     <string name="title_contact">Contatos</string>
+    <string name="pagamento_title">Pagamento</string>
 </resources>

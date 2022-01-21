@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/item_contact_title"
-        style="@style/Subtitle"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_marginStart="16dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
